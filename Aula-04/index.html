@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 - Web</title>
+  </head>
+  <body>
+    <h1>Principais formatações</h1>
+    <h2>Negrito / Destaque</h2>
+    <p>Na frase temos uma <b>parte do texto em negrito</b> usando a tag B (não semântica)</p>
+    <p>Na frase temos uma <strong>parte do texto em negrito</strong> usando a tag strong (com semântica)</p>
+
+    <h2>Itálico / Ênfase</h2>
+    <p>Nesta frase vamos entrar com uma palavra em <i>itálico</i> usando a tag i (não semântica)</p>
+    <p>Nesta frase vamos entrar com uma palavra em <em>itálico</em> usando a tag EM (com semântica)</p>
+
+    <h2>Texto Marcador</h2>
+    <p>Aqui vamos usar um texto com destquer <mark style="background-color: green;">de marcador de texto</mark> usando mark</p>
+    <p>Aqui vamos usar um texto com destquer <mark>de marcador de texto</mark> usando mark</p>
+
+    <h2>Texto Grande e Pequeno</h2>
+    <p>Estamos trabalhando aqui com <big>texto grande</big> e um <small>texto pequeno</small> nesta frase</p>
+
+    <h2>Texto Deletado</h2>
+    <p>Neste Paragrafo vamos trabalhar com um texto <del>que foi excluído</del> da frase (forma semântica)</p>
+
+    <h2>Texto Inserido</h2>
+    <p>Nesta frase vamos demonstrar como <ins>destacar um texto inserido</ins> na frase de forma semântica</p>
+    <p>Nesta frase vamos demonstrar como <u>destacar um texto inserido</u> na frase de forma não semântica</p>
+
+    <h2>Texto Sobrescrito</h2>
+    <p>vamos demonstrar uma formula da equação do segundo grau ax<sup>2</sup> + bx + c = 0 usando a tag sup</p>
+
+    <h2>Texto Subescrito</h2>
+    <p>vamos demonstrar o texto subescrito com a formula da agua H<sub>2</sub>O</p>
+
+    <h2>Trecho de código fonte</h2>
+    <p>Neste exemplo vou demonstrar um trecho de código</p>
+    <p>inserido o comando <code>document.getElementById('edtCodigo') que é um comando java script</code></p>
+    <p>Inserindo um longo codigo em python:</p>
+    
+    <pre>
+      import math
+
+      print("=== Cálculo de equação do segundo grau ===")
+      print("Forma: ax² + bx + c = 0")
+
+      # Entrada de dados
+      a = float(input("Digite o valor de a: "))
+      if a == 0:
+          print("Erro: 'a' não pode ser zero (não é equação do segundo grau).")
+      else:
+          b = float(input("Digite o valor de b: "))
+          c = float(input("Digite o valor de c: "))
+
+          # Cálculo do delta
+          delta = b**2 - 4*a*c
+
+          if delta < 0:
+              print("\nDelta < 0 → não há raízes reais.")
+              print(f"Delta = {delta:.2f}")
+          elif delta == 0:
+              x = -b / (2*a)
+              print("\nDelta = 0 → raízes reais iguais.")
+              print(f"Delta = {delta:.2f}")
+              print(f"x1 = x2 = {x:.2f}")
+          else:
+              x1 = (-b + math.sqrt(delta)) / (2*a)
+              x2 = (-b - math.sqrt(delta)) / (2*a)
+              print("\nDelta > 0 → duas raízes reais distintas.")
+              print(f"Delta = {delta:.2f}")
+              print(f"x1 = {x1:.2f}")
+              print(f"x2 = {x2:.2f}")
+    </pre>
+
+    <h2>Citações (quotation) simples</h2>
+    <p>segundo Steve Jobs <q>A tecnologia move o mundo</q></p>
+
+    <h2>Citações Completas (livros)</h2>
+    <p>Segundo Sandra Kussunoki no seu livro A dança e o ventre:</p>
+    <blockquote>Dados existentes sobre intervenções cirúrgicas nos corpos contemporâneos visando à obtenção de um corpo mais próximo do padrão estético tais como lipoaspiração, próteses de silicone, entre outras, comprovam essa busca obssessiva pelo ideal de perfeição, que é baseado principalmente na magreza.</blockquote>
+
+    <h2>Abreviações</h2>
+    <p>Estamos Estudando <abbr title="HTML">HTML</abbr> e <abbr title="CSS">CSS</abbr>.</p>
+
+    <h2>Texto Invertido</h2>
+    <p>Estou estudando HTML</p>
+    <p><bdo dir="rtl">Estou estudando HTML</bdo></p>
+  </body>
+</html>
